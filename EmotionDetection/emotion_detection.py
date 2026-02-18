@@ -12,8 +12,7 @@ def emotion_detector (text_to_analyze):
     if response.status_code == 200:
         emotions = formated_response['emotionPredictions'][0]['emotion']
         dominant_emotion = max(emotions, key=emotions.get)
-        print("emotions: ", emotions)
-        print("dominant_emotion: ", dominant_emotion)
+     
         
         collected_emotions = {
             "anger": emotions["anger"],
